@@ -17,10 +17,13 @@ Dicas:
 
 typedef unsigned int Set;
 
+/*Máscara com o bit i desligado e o resto ligado
+and pra zerar o bit i em s*/
 Set set_remove(Set s, int i) {
     return s & ~(1 << i);
 }
 
+/*interseção de r com complemento de s*/
 Set set_diferenca(Set r, Set s) {
     return r & ~s;
 }
