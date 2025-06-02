@@ -12,3 +12,15 @@ A sua implementação deverá ser a mais simples possível.
 Dicas:
 1) O operador k<< i, desloca os bits de k de i posições para a esquerda.
 2) O operador ~b inverte os bits de b. */
+
+#include <stdio.h>
+
+typedef unsigned int Set;
+
+Set set_remove(Set s, int i) {
+    return s & ~(1 << i);
+}
+
+Set set_diferenca(Set r, Set s) {
+    return r & ~s;
+}
